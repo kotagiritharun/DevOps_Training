@@ -1,0 +1,6 @@
+#!/bin/bash
+recipient=”admin@example.com”
+subject=”Greetings”
+message=”Welcome to UbuntuPit”
+`mail -s $subject $recipient <<< $message`
+
