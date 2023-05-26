@@ -1,4 +1,5 @@
 GIT Branching: 
+
 Branching in GIT allows for parallel development and isolated workspaces. 
 Creating a branch: 
 Use the command git branch <branch_name> to create a new branch. 
@@ -12,6 +13,7 @@ Use a merge tool or manually edit the conflicting file to resolve conflicts.
 Use the command git add <file(s)> to mark the conflicts as resolved and continue the merge process. 
  
 Collaborating with GIT: 
+
 Working with remote repositories: 
 Use the command git remote add <remote_name> <remote_url> to add a remote repository. 
 Use the command git push <remote_name> <branch_name> to push local changes to the remote repository. 
