@@ -1,0 +1,37 @@
+GIT Advanced Commands:
+ 
+Interactive Rebase: 
+
+Use the command git rebase -i <commit> to interactively modify, reorder, or combine commits. 
+Allows for cleaner commit history and easier cherry-picking of changes. 
+Reflog: 
+Use the command git reflog to view the reference logs, which store the history of branch updates and commits. 
+Helpful for recovering lost commits or branches. 
+Git Bisect: 
+Use the command git bisect to perform a binary search through commit history to find a specific issue or bug. 
+Automates the process of identifying the commit that introduced the problem. 
+GIT Hooks: 
+Git Hooks are scripts that run automatically at certain events in the Git workflow. 
+Pre-Commit Hooks: 
+Use pre-commit hooks to enforce code quality checks, such as linting or running unit tests before committing changes. 
+Helps maintain code quality and consistency. 
+Post-Commit Hooks: 
+Use post-commit hooks to perform actions after a commit, such as triggering automated builds or notifications. 
+Enhances workflow automation and integration with other systems. 
+Working with Remote Repositories: 
+Forking and Pull Requests: 
+Fork a repository to create a personal copy under your GitHub account. 
+Make changes in your forked repository and submit a pull request to propose the changes to the original repository. 
+Facilitates open-source collaboration and contribution. 
+Issue Tracking Integration: 
+Integrate GIT with issue tracking systems like GitHub Issues or JIRA to link commits with specific issues or tasks. 
+Improves traceability and project management. 
+GIT Tips and Tricks: 
+GIT Aliases: 
+Define custom aliases for frequently used GIT commands or command sequences to simplify and speed up your workflow. 
+Gitk and GitKraken: 
+Utilize visualization tools like Gitk or GitKraken to view the commit history graphically and gain insights into project development. 
+Visualizes branch structures, merges, and commit relationships. 
+GIT Integration with CI/CD: 
+Continuous Integration and Continuous Deployment (CI/CD) pipelines can be set up to automate build, test, and deployment processes. 
+Integrate GIT with CI/CD tools like Jenkins or GitLab CI to trigger automated builds and tests on every commit.

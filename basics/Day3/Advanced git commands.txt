@@ -1,0 +1,34 @@
+Here are some advanced Git commands along with their options: 
+git reset <commit>: 
+Undo commits by moving the branch pointer to a previous commit. 
+Options: 
+--soft: Keep changes in the staging area. 
+--mixed (default): Keep changes in the working directory. 
+--hard: Discard all changes. 
+git rebase -i <commit>: 
+Interactively modify or reorder commits. 
+Options: None. 
+git cherry-pick <commit>: 
+Apply a specific commit to the current branch. 
+Options: 
+--no-commit: Apply the changes without creating a commit. 
+git bisect: 
+Perform a binary search to find a specific commit that introduced a bug. 
+Options: 
+start: Start the binary search. 
+good <commit>: Mark a commit as good. 
+bad <commit>: Mark a commit as bad. 
+git stash: 
+Temporarily save changes that are not ready to be committed. 
+Options: 
+save: Stash changes with a custom message. 
+pop: Apply the most recent stash and remove it from the stash list. 
+git remote: 
+Manage remote repositories. 
+Options: 
+-v or --verbose: Show more detailed information about each remote. 
+add <name> <url>: Add a new remote repository. 
+remove <name>: Remove a remote repository. 
+git reflog: 
+Show a log of all Git references, including branches and HEAD history. 
+Options: None.

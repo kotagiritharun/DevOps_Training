@@ -1,0 +1,23 @@
+Git commands for collaboration and working with remote repositories, along with their options: 
+git remote -v: 
+Show the remote repositories associated with your local repository. 
+Options: None. 
+git remote add <name> <url>: 
+Add a new remote repository with the specified name and URL. 
+Options: None. 
+git fetch <remote>: 
+Fetch changes from a remote repository without merging. 
+Options: None. 
+git merge <remote>/<branch>: 
+Merge changes from a remote branch into your current branch. 
+Options: None. 
+git push <remote> <branch>: 
+Push your local commits to a specific branch on a remote repository. 
+Options: 
+--force: Force the push even if it results in a non-fast-forward update. 
+--tags: Push tags along with the branch commits. 
+git pull <remote> <branch>: 
+Fetch and merge changes from a remote repository. 
+Options: 
+--rebase: Rebase local commits on top of the updated remote branch. 
+--no-commit: Fetch changes but do not create a merge commit.
