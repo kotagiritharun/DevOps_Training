@@ -1,0 +1,103 @@
+Day 1: Introduction to Git
+
+1. Familiarize yourself with Git basics:
+   - Understand the purpose of version control and Git's role in it.
+   - Learn about the fundamental concepts of Git, such as repositories, commits, branches, and remotes.
+
+2. Install Git:
+   - Download and install Git on your computer from the official website (https://git-scm.com/).
+
+3. Configure Git:
+   - Set up your name and email address using the following commands:
+     ```
+     git config --global user.name "Your Name"
+     git config --global user.email "your@email.com"
+     ```
+
+4. Create a local repository:
+   - Create a new directory on your computer for your project.
+   - Open a terminal or command prompt, navigate to the project directory, and initialize a new Git repository using the command:
+     ```
+     git init
+     ```
+
+5. Add and commit files:
+   - Create some files or copy an existing project into your repository.
+   - Use the following commands to stage and commit your changes:
+     ```
+     git add <file1> <file2> ...     # Stage specific files
+     git add .                       # Stage all files
+     git commit -m "Initial commit"   # Commit changes with a descriptive message
+     ```
+
+Day 2: Branching and Merging
+
+1. Create and switch branches:
+   - Learn about the importance of branches in Git for isolating changes and parallel development.
+   - Create a new branch using the command:
+     ```
+     git branch <branch-name>
+     ```
+   - Switch to the newly created branch:
+     ```
+     git checkout <branch-name>
+     ```
+
+2. Make changes in a branch:
+   - Switch to the branch where you want to make changes.
+   - Modify existing files or create new ones.
+
+3. Merge branches:
+   - Switch back to the main branch:
+     ```
+     git checkout main
+     ```
+   - Merge your branch into the main branch:
+     ```
+     git merge <branch-name>
+     ```
+   - Resolve any conflicts that may arise during the merge process.
+
+Day 3: Collaboration with Remotes
+
+1. Set up a remote repository:
+   - Create a repository on a Git hosting service like GitHub, GitLab, or Bitbucket.
+   - Link your local repository to the remote repository using the command:
+     ```
+     git remote add origin <remote-url>
+     ```
+
+2. Push and pull changes:
+   - Push your local commits to the remote repository:
+     ```
+     git push origin <branch-name>
+     ```
+   - Pull changes from the remote repository to your local repository:
+     ```
+     git pull origin <branch-name>
+     ```
+
+3. Resolve conflicts in collaboration:
+   - Collaborate with other developers by pulling their changes and resolving conflicts if any.
+   - Use appropriate Git commands to fetch and merge remote changes.
+
+Day 4: Git Workflow and Advanced Features
+
+1. Explore Git workflow strategies:
+   - Learn about popular Git workflows like Gitflow, GitHub Flow, or GitLab Flow.
+   - Choose a workflow that suits your project's requirements.
+
+2. Use Git tags:
+   - Learn how to create lightweight and annotated tags to mark specific points in your project's history.
+   - Understand the difference between tags and branches.
+
+3. Explore Git log and history:
+   - Use the `git log` command to view the commit history.
+   - Learn about options like `--oneline`, `--graph`, and `--stat` to customize the log output.
+
+Day 5: Git Best Practices and Tips
+
+1. Git best practices:
+   - Keep commits focused and atomic, focusing on a single logical change.
+   - Write clear and descriptive commit messages.
+   - Regular
