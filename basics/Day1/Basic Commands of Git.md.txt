@@ -1,0 +1,41 @@
+Here are some basic Git commands along with commonly used options: 
+git init: 
+Initialize a new Git repository. 
+Options: None. 
+git clone <repository>: 
+Clone a remote repository to your local machine. 
+Options: None. 
+git add <file>: 
+Stage a file or changes for commit. 
+Options: 
+-A or --all: Stage all changes, including untracked files. 
+<pathspec>: Stage specific files or directories. 
+git commit -m "<message>": 
+Commit the staged changes with a descriptive message. 
+Options: None. 
+git status: 
+View the current status of your repository. 
+Options: None. 
+git log: 
+Show the commit history. 
+Options: 
+--oneline: Show concise commit history in one line per commit. 
+--author=<author>: Filter the commit history by author. 
+git push: 
+Push your local commits to a remote repository. 
+Options: 
+<remote>: Specify the remote repository. 
+<branch>: Specify the branch to push. 
+git pull: 
+Fetch and merge changes from a remote repository. 
+Options: 
+<remote>: Specify the remote repository. 
+<branch>: Specify the branch to pull. 
+git branch: 
+List all branches in the repository. 
+Options: 
+-a or --all: Show both local and remote branches. 
+-r or --remotes: Show only remote branches. 
+git checkout <branch>: 
+Switch to a different branch. 
+Options: None. 
