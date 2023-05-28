@@ -1,0 +1,44 @@
+Certainly! Here are a few more Git hooks with their corresponding code snippets:
+
+7. **pre-rebase**: Executes before a branch is rebased. It can be used to perform checks or actions before rebasing the branch.
+```bash
+#!/bin/sh
+echo "Running pre-rebase checks..."
+# Perform any pre-rebase checks or actions here
+# If any checks fail, exit with a non-zero status to prevent the rebase
+```
+
+8. **pre-push**: Runs before a push operation is executed. It can be used to enforce certain policies, such as requiring code reviews or branch naming conventions.
+```bash
+#!/bin/sh
+echo "Running pre-push checks..."
+# Perform any pre-push checks or actions here
+# If any checks fail, exit with a non-zero status to prevent the push
+```
+
+9. **pre-receive**: Executes on the remote repository when receiving a push. It can be used to enforce server-side policies or perform additional checks.
+```bash
+#!/bin/sh
+echo "Running pre-receive checks..."
+# Perform any pre-receive checks or actions here
+# If any checks fail, exit with a non-zero status to prevent the push
+```
+
+10. **post-merge**: Runs after a successful merge operation. It can be used to trigger actions such as updating dependencies or rebuilding the project.
+```bash
+#!/bin/sh
+echo "Post-merge hook triggered."
+# Perform any post-merge actions here, such as updating dependencies or rebuilding the project
+```
+
+11. **pre-auto-gc**: Executes before Git performs an automatic garbage collection. It can be used to run custom cleanup tasks or checks.
+```bash
+#!/bin/sh
+echo "Running pre-auto-gc tasks..."
+# Perform any pre-auto-gc tasks or checks here
+# If any checks fail, exit with a non-zero status to prevent the auto-gc
+```
+
+To use these hooks, create executable files with the corresponding hook names in the `.git/hooks` directory of your Git repository. Customize the scripts according to your needs, and ensure the files have execution permissions (e.g., `chmod +x <hook-file>`).
+
+Remember that the specific actions and checks performed within the hooks will depend on your project's requirements and workflow.

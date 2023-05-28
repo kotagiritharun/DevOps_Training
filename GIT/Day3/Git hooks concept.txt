@@ -1,0 +1,50 @@
+Git hooks are scripts that can be executed before or after certain Git events occur, such as committing changes or pushing to a remote repository. These hooks allow you to automate tasks or enforce certain policies within your Git workflow. Here are some common Git hooks with their corresponding code snippets:
+
+1. **pre-commit**: Executes before a commit is made. It can be used to run tests or perform code linting/formatting checks.
+```bash
+#!/bin/sh
+echo "Running pre-commit checks..."
+# Run your tests or code linting/formatting commands here
+# If any checks fail, exit with a non-zero status to prevent the commit
+```
+
+2. **pre-push**: Runs before a push operation is executed. It can be used to perform additional checks, such as running integration tests or validating the code.
+```bash
+#!/bin/sh
+echo "Running pre-push checks..."
+# Run your integration tests or any other checks here
+# If any checks fail, exit with a non-zero status to prevent the push
+```
+
+3. **post-commit**: Executes after a commit is successfully made. It can be used to trigger notifications or perform post-commit tasks.
+```bash
+#!/bin/sh
+echo "Post-commit hook triggered."
+# Perform any post-commit tasks here, such as sending notifications or updating documentation
+```
+
+4. **post-checkout**: Runs after a successful checkout operation. It can be used to restore dependencies, clean up temporary files, or perform any other necessary actions.
+```bash
+#!/bin/sh
+echo "Post-checkout hook triggered."
+# Perform any post-checkout actions, such as restoring dependencies or cleaning up temporary files
+```
+
+5. **post-receive**: Executes on the remote repository after a push is received. It can be used to perform deployment actions or trigger CI/CD pipelines.
+```bash
+#!/bin/sh
+echo "Post-receive hook triggered."
+# Perform deployment actions or trigger CI/CD pipelines here
+```
+
+6. **update**: Runs on the remote repository when a reference is being updated. It can be used to enforce access control or perform additional checks.
+```bash
+#!/bin/sh
+echo "Update hook triggered."
+# Enforce access control or perform additional checks here
+# If any checks fail, exit with a non-zero status to prevent the update
+```
+
+To use these hooks, you need to create executable files with the corresponding hook names in the `.git/hooks` directory of your Git repository. Make sure to remove the `.sample` extension from the hook file names and customize the scripts to fit your specific requirements.
+
+

@@ -1,0 +1,106 @@
+Certainly! Here's an example of a user-defined Git hook that enforces a commit message format:
+
+1. **commit-msg**: Executes after a commit message is entered but before the commit is created. It can be used to enforce a specific commit message format or perform additional validation.
+
+Here's an example of a commit-msg hook that enforces the commit message to start with a JIRA ticket number followed by a colon and a space:
+
+```bash
+#!/bin/sh
+commit_msg_file=$1
+
+commit_msg=$(cat "$commit_msg_file")
+
+# Define the regular expression pattern for the commit message format
+pattern="^[A-Z]+-[0-9]+: .*"
+
+# Check if the commit message matches the expected format
+if ! [[ $commit_msg =~ $pattern ]]; then
+    echo "Error: Commit message format is incorrect."
+    echo "Commit message must start with a JIRA ticket number followed by a colon and a space."
+    exit 1
+fi
+
+exit 0
+```
+
+To use this hook, create an executable file named `commit-msg` in the `.git/hooks` directory of your Git repository. Save the above code into the `commit-msg` file, and make it executable (e.g., `chmod +x .git/hooks/commit-msg`).
+
+Now, whenever you create a commit, the hook will check if the commit message matches the defined format. If it doesn't match, an error message will be displayed, and the commit will be rejected.
+
+You can customize this hook further by modifying the regular expression pattern or adding additional validation logic to suit your specific commit message requirements.
+
+Note: Make sure that the hook is distributed and enforced across all developers working on the repository. It's important to establish clear guidelines and ensure everyone understands and follows the commit message format defined by the hook.
+
+
+Other examples:
+Certainly! Here are a few user-defined Git hook examples with accompanying notes:
+
+1. **pre-commit**: Executes before a commit is made. It can be used to run tests, perform code linting/formatting checks, or enforce commit message conventions.
+
+```bash
+#!/bin/sh
+echo "Running pre-commit checks..."
+
+# Run test suite
+echo "Running tests..."
+# Insert your test command here
+# If the tests fail, exit with a non-zero status to prevent the commit
+
+# Lint and format code
+echo "Linting and formatting code..."
+# Insert your code linting/formatting command here
+# If the linting/formatting fails, exit with a non-zero status to prevent the commit
+
+# Enforce commit message conventions
+echo "Validating commit message..."
+commit_msg_file=$1
+commit_msg=$(cat "$commit_msg_file")
+
+pattern="^JIRA-[0-9]+: .*"
+if ! [[ $commit_msg =~ $pattern ]]; then
+    echo "Error: Commit message does not follow the required format."
+    echo "Commit message must start with 'JIRA-' followed by a ticket number and a colon."
+    echo "Example: JIRA-123: Commit message details."
+    exit 1
+fi
+
+exit 0
+```
+
+2. **pre-push**: Runs before a push operation is executed. It can be used to perform additional checks, such as running integration tests or validating the code.
+
+```bash
+#!/bin/sh
+echo "Running pre-push checks..."
+
+# Run integration tests
+echo "Running integration tests..."
+# Insert your integration test command here
+# If the tests fail, exit with a non-zero status to prevent the push
+
+# Validate code or configurations
+echo "Validating code or configurations..."
+# Insert your validation command here
+# If the validation fails, exit with a non-zero status to prevent the push
+
+exit 0
+```
+
+3. **post-commit**: Executes after a commit is successfully made. It can be used to trigger notifications, update documentation, or perform other post-commit tasks.
+
+```bash
+#!/bin/sh
+echo "Post-commit hook triggered."
+
+# Send notifications
+echo "Sending notifications..."
+# Insert your notification command here
+
+# Update documentation
+echo "Updating documentation..."
+# Insert your documentation update command here
+
+exit 0
+```
+
+Feel free to customize these hooks to fit your specific needs. Additionally, ensure that the hooks are executable (e.g., `chmod +x .git/hooks/pre-commit`) and are distributed and enforced across all developers working on the repository.
